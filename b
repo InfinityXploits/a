@@ -336,6 +336,7 @@ function Lib.Window(Title)
 			TextLabel.TextColor3 = Color3.fromRGB(227, 227, 227)
 			TextLabel.TextSize = 26.000
 			TextLabel.TextWrapped = true
+			TextLabel.TextScaled = true
 			TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 
 			TouchImage.Name = "TouchImage"
