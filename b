@@ -512,7 +512,7 @@ function Lib.Window(Title)
 			ValueLabel.ZIndex = 10
 			ValueLabel.FontFace = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 			ValueLabel.Text = minvalue
-			ValueLabel.TextColor3 = Color3.fromRGB(227, 227, 227)
+			ValueLabel.TextColor3 = Color3.fromRGB(200, 150, 255)
 			ValueLabel.TextSize = 26.000
 			ValueLabel.TextWrapped = true
 			ValueLabel.TextTransparency = 1.000
