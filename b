@@ -509,7 +509,7 @@ function Lib.Window(Title)
 			ValueLabel.BorderSizePixel = 0
 			ValueLabel.Position = UDim2.new(0.628692031, 0, 0.0416666679, -1)
 			ValueLabel.Size = UDim2.new(0, 88, 0, 32)
-			ValueLabel.ZIndex = 5
+			ValueLabel.ZIndex = 10
 			ValueLabel.FontFace = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 			ValueLabel.Text = minvalue
 			ValueLabel.TextColor3 = Color3.fromRGB(227, 227, 227)
