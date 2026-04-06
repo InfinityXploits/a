@@ -421,7 +421,11 @@ function Lib.Window(Title)
 			local UICorner_2 = Instance.new("UICorner")
 			local UICorner_3 = Instance.new("UICorner")
 			local ValueLabel = Instance.new("TextLabel")
-
+			local Stroke = Instance.new("UIStroke")
+			Stroke.Parent = ValueLabel
+			Stroke.Color = Color3.fromRGB(0, 0, 0) -- border color
+			Stroke.Thickness = 1.5
+			Stroke.Transparency = 0
 			SliderFrame.Name = "SliderFrame"
 			SliderFrame.Parent = TabContent
 			SliderFrame.Active = true
@@ -509,7 +513,7 @@ function Lib.Window(Title)
 			ValueLabel.BorderSizePixel = 0
 			ValueLabel.Position = UDim2.new(0.628692031, 0, 0.0416666679, -1)
 			ValueLabel.Size = UDim2.new(0, 88, 0, 32)
-			ValueLabel.ZIndex = 10
+			ValueLabel.ZIndex = 20
 			ValueLabel.FontFace = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 			ValueLabel.Text = minvalue
 			ValueLabel.TextColor3 = Color3.fromRGB(200, 150, 255)
