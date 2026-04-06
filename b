@@ -114,6 +114,9 @@ function Lib.Window(Title)
 	UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 	UIListLayout.Padding = UDim.new(0, 19)
+	UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
+		TabNavigator.CanvasSize = UDim2.new(0, 0, 0, UIListLayout.AbsoluteContentSize.Y + 12)
+	end)
 	
 	Lib:Drag(TopBar,Main)
 	
@@ -247,6 +250,9 @@ function Lib.Window(Title)
 		ContentLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 		ContentLayout.SortOrder = Enum.SortOrder.LayoutOrder
 		ContentLayout.Padding = UDim.new(0,12)
+		ContentLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
+			TabContent.CanvasSize = UDim2.new(0, 0, 0, ContentLayout.AbsoluteContentSize.Y + 12)
+		end)
 
 		if first then
 			first = false
@@ -1046,6 +1052,9 @@ function Lib.Window(Title)
 			ContentLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 			ContentLayout.SortOrder = Enum.SortOrder.LayoutOrder
 			ContentLayout.Padding = UDim.new(0, 8)
+			ContentLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
+				DropdownContainer.CanvasSize = UDim2.new(0, 0, 0, ContentLayout.AbsoluteContentSize.Y + 12)
+			end)
 			
 			for i,v in next, list do
 				local Option = Instance.new("TextButton")
